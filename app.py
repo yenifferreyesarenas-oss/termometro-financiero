@@ -11,8 +11,7 @@ TASA_CLP = 1073
 
 def main():
     st.title("🌡️ Termómetro Financiero PFG & Agencia AIMA")
-    st.markdown("> *Creado en honor a la perseverancia, esfuerzo y visión de "
-                "**Yeniffer (Agencia AIMA)** con el respaldo de **PFG Asesorías**.*")
+   
     st.markdown("---")
 
     df = pd.DataFrame({
@@ -60,7 +59,7 @@ def main():
         st.dataframe(df[["Mes", "Resultado_Acumulado_CLP"]],
                      width="stretch", hide_index=True)
 
-    st.success("¡Listos para romperla en el mundo digital!")
+  
 
 
 if __name__ == "__main__":
