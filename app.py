@@ -137,7 +137,7 @@ if res_mes < 0 and caja_fin > 0:
 elif res_mes < 0:
     autonomia = "Sin caja"
 else:
-    autonomia = "No consume caja"
+    autonomia = "Sin consumo"
 brecha = max(0, -res_mes)
 
 if caja_min < 0 or margen < 0:
@@ -176,7 +176,7 @@ with t2:
                                      Total=("Total", "sum"))
     t48 = sum(c48.values())
     if t48:
-        mix.loc["Comprobantes pago electrónico (48)"] = [float("nan"), t48, round(t48 * 1.19), 0]
+        mix.loc["Comprobantes pago electrónico (48)"] = [float("nan"), t48, round(t48 * 1.19)]
     mix["% del neto"] = mix["Neto"] / mix["Neto"].sum()
     a.subheader("Facturas vs. boletas")
     a.dataframe(mix.style.format({"Documentos": "{:,.0f}", "Neto": "{:,.0f}", "Total": "{:,.0f}",
